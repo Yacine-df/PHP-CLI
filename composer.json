@@ -1,0 +1,13 @@
+{
+    "name": "yacinediaf/taskcli",
+    "authors": [
+        {
+            "name": "Yacine-df",
+            "email": "ycn.diaf@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/console": "7.0"
+    }
+}

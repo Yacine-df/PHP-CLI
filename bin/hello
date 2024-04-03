@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+require 'vendor/autoload.php';
+
+$app = new Application('cli demo', '1.0');
+
+$app->register('sayHello')
+    ->addArgument('name', InputArgument::REQUIRED, 'your name')
+    ->setDescription('offers a greeting to someone')
+    ->setCode(function (InputInterface $in, OutputInterface $out) {
+
+        $name = $in->getArgument('name');
+
+        $out->writeln("<error>hello {$name}</error>");
+    });
+
+$app->run();
